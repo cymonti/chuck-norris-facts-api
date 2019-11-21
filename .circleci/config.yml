@@ -38,6 +38,12 @@ jobs:
         name: Authenticate gcloud
         command: |
           gcloud auth activate-service-account --key-file credentials/ci-production.json
+    -run:
+        name: Install Docker Client
+        command: |
+          curl -L -o /tmp/docker.tgz https://get.docker.com/builds/Linux/x86_64/docker-1.12.3.tgz
+          tar -xz -C /tmp -f /tmp/docker.tgz
+          mv /tmp/docker/docker* /usr/bin/
     - run:
         name: Debug docker
         command: |
