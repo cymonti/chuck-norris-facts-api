@@ -7,6 +7,7 @@ jobs:
     - image: tiangolo/uvicorn-gunicorn-fastapi:python3.7
     steps:
     - checkout
+    - setup_remote_docker
     - run:
         name: Install dependencies
         command: |
@@ -47,7 +48,6 @@ jobs:
     - run:
         name: Debug docker
         command: |
-          service start docker
           docker version
     - run:
         name: Build docker image
