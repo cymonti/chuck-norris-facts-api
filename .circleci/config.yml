@@ -21,7 +21,7 @@ jobs:
   deploy:
     working_directory: ~/repo
     docker:
-    - image: google/cloud-sdk
+    - image: google/cloud-sdk:265.0.0
     steps:
     - checkout
     - run:
