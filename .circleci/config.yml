@@ -24,7 +24,7 @@ jobs:
     - image: google/cloud-sdk:265.0.0
     steps:
     - checkout
-    - - setup_remote_docker
+    - setup_remote_docker
     - run:
         name: Create credentials file
         command: |
