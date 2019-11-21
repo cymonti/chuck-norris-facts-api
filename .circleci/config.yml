@@ -47,7 +47,7 @@ jobs:
     - run:
         name: Debug docker
         command: |
-          setup-docker-engine
+          service start docker
           docker version
     - run:
         name: Build docker image
